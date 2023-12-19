@@ -27,15 +27,16 @@ def sending_a_mail():
     #-----get----emailID---from---PAGE
     if request.method == 'POST':
         user_email = request.form.get('u_email')
+        
 
     #-----get----emailID---from---PAGE
 
     #sending-----a-------mail---------
     #establish a connection
-    s = SMTP('mail.google.com', 587)
+    s = SMTP('smtp.gmail.com', 587)
     s.starttls() # security
-    s.login('devangsingh101@gmail.com', 'yuiirzlaimgacxef')
-    s.send_mail('devangsingh101@gmail.com', user_email,'HELLO FROM FLASK APP')
+    s.login('devangsingh101@gmail.com', 'lemdqvvzjcryivfv')
+    s.sendmail('devangsingh101@gmail.com', user_email,'HELLO FROM FLASK APP')
     s.quit()
     #sending-----a-------mail---------
 
